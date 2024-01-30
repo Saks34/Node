@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="add()">
+    <form action="/action_page.php">
+        <label for="name">Name</label>
+        <input type="text" id="name" name = "name" placeholder="FirstName Last Name"><br>
+        <label for="email">E-Mail</label>
+        <input type="email" id="email"name="email" placeholder="E-Mail"><br>
+        
+        <label >Select City</label>
+        <select id="select" name="select">
+            <option value="select">Select</option>
+            <option value="Noida">Noida</option>
+            <option value="Kolkata">Kolkata</option>
+        </select><br>
+        <label for="password">Password</label>
+        <input type="password" id="pwd" name="pwd" placeholder="Password"><br>  
+        <label>Gender</label>
+        <input type="radio" id="Male" name="Gender" value="Boat">
+        <label for="Male">Male</label>
+        <input type="radio" id="Female" name="Gender" value="Boat">
+        <label for="Female">Female</label> 
+        <input type="radio" id="Others" name="Gender" value="Boat">
+        <label for="Gender">Others</label><br>
+        <input type="submit" value="Hogaya">
+        <input type="reset" value="Galat">
+    </form>
+    
+    
+</body>
+</html>

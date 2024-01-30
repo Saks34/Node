@@ -1,0 +1,64 @@
+
+h1
+{
+    color: lightcoral;
+    border: 1cap;
+    text-align: center;
+}
+p.hello
+{
+    font-size: large;
+    text-align: center;
+    margin-left: 10px;
+}
+h2.hello
+{
+    text-align: end;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 50px;
+}
+pre.hello
+{
+    font-size: 15px;
+}
+.hello
+{
+    color: rgb(32, 187, 45);    
+}
+tr
+{
+    color: rgb(19, 85, 143);
+    
+}
+
+tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
+  td:nth-child(even), th:nth-child(even) {
+    background-color: #D6EEEE;
+
+  }
+  tr {
+    border-bottom: 1px solid #ddd;
+  }
+table
+{
+    border-spacing: 5px;
+}
+table,td,th
+{
+    border: 2px solid black;
+}
+td,th
+{
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-bottom: 25px;
+    padding-right: 5px;
+}
+.hey
+{
+    text-align:center;
+    color: black;
+    font-size: 50px;
+}
