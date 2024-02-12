@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function person(first,last,age , eye){
+            this.f = first;
+            this.l = last;
+            this.a = age;
+            this.e = eye;
+        }
+
+        person.prototype.hi = "Hello";
+        const student = new person ("John", "Deo" , 20 , "bule");
+        document.getElementById("demo").innerHTML = "Student age is " + student.a + student.hi;
+    </script>
+</body>
+</html>
