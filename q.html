@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbnail</title>
+    <style type="text/css">
+        .imgstyle
+        {
+            width:100px;
+            height:100px;
+            border:3px solid rgb(101, 28, 196);
+        }
+
+    </style>
+</head>
+<body>
+    <img id="mainImage" style="border:5px solid grey" src="Etp .png" height="500px" width="540px"><br>
+    <div id="divid" onclick="changeImageOnClick()" onmouseover="f1()" onmouseout="f2()">
+      <img id="2" class="imgstyle" src="WhatsApp Image 2022-11-20 at 08.43.51 (2).jpg">
+      <img id="3" class="imgstyle" src="Etp .png">
+      <img id="4" class="imgstyle" src="WhatsApp Image 2022-11-20 at 08.43.51 (2).jpg">
+      <img id="5" class="imgstyle" src="Etp .png">
+      <img id="6" class="imgstyle" src="WhatsApp Image 2022-11-20 at 08.43.51 (2).jpg">
+    </div> 
+    
+    <script type="text/javascript">
+        function changeImageOnClick()
+        {
+            var x=event.target;
+            if(x.tagName=="IMG")
+            {
+                a=x.getAttribute("src");
+                document.getElementById("mainImage").setAttribute("src",a);
+            }
+        }
+        function f1()
+        {
+            x=event.target;
+            x.style.cursor="pointer";
+            x.style.borderColor='red';
+        }
+        function f2()
+        {
+            x=event.target;
+            x.style.borderColor='grey';
+        }
+
+    </script>
+</body>
+</html>

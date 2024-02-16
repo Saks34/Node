@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Web Page</title>
+<style>
+    body {
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    #toggleButton {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    #content {
+        margin-top: 20px;
+    }
+    #dynamicText {
+        font-size: 18px;
+        color: blue;
+        font-style: italic;
+    }
+</style>
+</head>
+<body>
+
+<p id="dynamicText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores labore culpa quod, qui quae illum id repellat excepturi quaerat praesentium perspiciatis numquam enim. Dolores veritatis et consequuntur inventore sapiente expedita.</p>
+
+<button id="toggleButton" onclick="toggleImage()">Toggle Image Visibility</button>
+<br><br>
+<img id="image" src="Etp .png" alt="Placeholder Image" style="display:none;">
+
+<script>
+    // Function to toggle image visibility
+    function toggleImage() {
+        var image = document.getElementById("image");
+        if (image.style.display === "none") {
+            image.style.display = "block";
+        } else {
+            image.style.display = "none";
+        }
+    }
+
+    // Change background color every 3 seconds
+    function changeBackgroundColor() {
+        var colors = ['#ffcccc', '#ccffcc', '#ccccff', '#ffffcc'];
+        var currentColor = document.body.style.backgroundColor;
+        var currentIndex = colors.indexOf(currentColor);
+        var newIndex = (currentIndex + 1) % colors.length;
+        document.body.style.backgroundColor = colors[newIndex];
+    }
+
+    // Create a new element and append it to the document
+    var newElement = document.createElement("div");
+    newElement.textContent = "Newly appended element";
+    document.querySelector("body").appendChild(newElement);
+
+    // Function to dynamically change text content, style, and color
+    function changeTextContent() {
+        var newText = "hellooo i am from lpu";
+        var dynamicText = document.getElementById("dynamicText");
+        dynamicText.textContent = newText;
+        dynamicText.style.fontStyle = "normal";
+        dynamicText.style.color = "red";
+        dynamicText.style.fontSize = "24px";
+    }
+
+    // Call changeTextContent function every 5 seconds
+    setInterval(changeTextContent, 5000);
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .ele{
+            border: 20px solid;
+            padding: 40px;
+            position: relative;
+            top: 30%;
+            margin: 10px;
+            width: 30%;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="outermost" class="ele">
+        <div id="inner" class="ele">
+            <div id="innermost" class="ele"></p></div>
+                
+        </div>
+    </div>
+    <script>
+        innermost.addEventListener("mouseover",function(){
+            this.style.borderColor='red';
+            this.style.trasform='rotate(306deg)';
+            this.style.transition='12s';
+        });
+        inner.addEventListener("mouseover",function(){
+            this.style.borderColor='green';
+            this.style.trasform='rotate(306deg)';
+            this.style.transition='21s';
+        });
+        outermost.addEventListener("mouseover",function(){
+            this.style.borderColor='blue';
+            this.style.trasform='rotate(306deg)';
+            this.style.transition='32s';
+        });
+    </script>
+</body>
+</html>
