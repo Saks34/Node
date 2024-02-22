@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error-Prone Code</title>
+</head>
+<body>
+
+    <h1>Error-Prone Code</h1>
+
+    <p id="dynamicParagraph">This text can be changed dynamically.</p>
+
+    <button id="toggleButton">Toggle Image</button>
+    <img id="imageToToggle" src="Etp .png" alt="Toggle Image" style="display: block;">
+
+    <script>
+        // Syntax Error - Missing closing parenthesis
+        console.log('Syntax Error');
+
+        // Reference Error - Using an undefined variable
+        // Fixing Reference Error
+    var someUndefinedVariable = 'Hello, I am defined now!';
+    var undefinedVariable = someUndefinedVariable;
+    console.log(undefinedVariable);
+
+
+        // Type Error - Attempting to access a property of a non-object
+        // Fixing Type Error
+var nullObject = null;
+
+// Using an if statement to check for null
+if (nullObject !== null) {
+    console.log(nullObject.property);
+} else {
+    console.log('Object is null.');
+}
+
+// Using the nullish coalescing operator
+console.log(nullObject?.property ?? 'Object is null.');
+
+
+        // Range Error - Recursive function without base case
+       // Fixed recursive function with a base case
+function infiniteRecursion(counter) {
+    // Base case: stop recursion after a certain number of calls
+    if (counter <= 0) {
+        return 'Reached base case!';
+    }
+
+    // Recursive call
+    return infiniteRecursion(counter - 1);
+}
+
+// Start the recursion with an initial counter value
+infiniteRecursion(10);
+
+
+        var userInputElement = document.getElementById('userInput');
+
+if (userInputElement) {
+    var userInput = userInputElement.value;
+    console.log(userInput);
+} else {
+    console.log('Element with ID "userInput" not found.');
+}
+
+
+        var array = [1, 2, 3];
+        console.log(array[5]);
+
+        var result = 10 / 0;
+
+        var nonExistingButton = document.getElementById('nonExistingButton');
+
+if (nonExistingButton) {
+    nonExistingButton.addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+} else {
+    console.log('Element with ID "nonExistingButton" not found.');
+}
+
+    </script>
+</body>
+</html>
