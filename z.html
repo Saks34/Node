@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+            alert($("h1").text());
+        });
+        $("#b2").click(function(){
+            alert($("h1").html());
+        });
+        $("#b3").click(function(){
+            alert($("#lpu").attr("href"));
+        });
+        $("img").click(function(){
+            alert($("#lpu").attr("href"));
+        });
+    });
+
+    </script>
+    <h1>?????? ?????? ?????<p>Hello</p></h1>
+    <h2>hfbkijero</h2>
+    <img src="Etp .png" height="300" width="300"><br>
+    <a href="https://www.youtube.com" id="lpu">Youtube</a>
+    <button id="b1">Text</button>
+    <button id="b2">html</button>
+    <button id="b3">Html</button>
+</body>
+</html>
