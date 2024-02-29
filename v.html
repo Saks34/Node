@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="d"></p>
+    <script>
+        var Stu = {
+            "name" : "Sakshu",
+            "cgpa" : 11,
+            "courses" : ["HTML","CSE"]
+        };
+        var j = JSON.stringify(Stu);
+        var obj = JSON.parse(j);
+        document.getElementById("d").innerHTML = obj.name + obj.cgpa + obj.courses[1];
+    </script>
+</body>
+</html>
