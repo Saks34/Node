@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#b1").click(function(){
+            $("p").prepend("helloo<br>")
+        });
+        $("#b2").click(function(){
+            $("p").append("<br> kon ho bhai")
+        });
+    });
+
+    </script>
+    <h1>?????? ?????? ?????</h1>
+    <p>bvukifehb</p>
+    <button id="b1">Text</button>
+    <button id="b2">html</button>
+</body>
+</html>

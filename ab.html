@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <form>
+        <input type="text" name="Name" id="name"><br>
+        <input type="submit" name="submit" id="submit" disabled="disabled">
+    </form>
+    <script>
+        $('#name').keyup(function(){
+            if($('name').val()!=''){
+                $('#submit').removeAttr('disabled');
+            }
+            else{
+                $('#submit').attr('disabled','disabled');
+            }
+        })
+    </script>
+</body>
+</html>
