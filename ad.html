@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src = "http://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function(){
+                $("p").prepend("hello<br>");
+            });
+            $("#btn2").click(function(){
+                $("p").append("<br>how are you");
+            });
+        });
+    </script>
+    <h1>Helloo</h1>
+    <p>hey</p>
+    <button id="btn1">Prepend</button>
+    <button id="btn2">append</button>
+</body>
+</html>
