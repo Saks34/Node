@@ -1,0 +1,31 @@
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<title>Dynamic Update with jQuery</title>
+</head>
+
+<body>
+<div id="updateMe">
+<h2></h2>
+<p></p>
+</div>
+
+<script>
+    const jsonData = {
+        "title": "Dynamic Title",
+        "content": "This content is dynamically updated."
+    };
+
+    // Use jQuery to wait for the document to be ready
+    $(document).ready(function () {
+        // Target specific elements using jQuery selectors and update them with JSON data
+        $("#updateMe h2").text(jsonData.title);
+        $("#updateMe p").text(jsonData.content);
+    });
+</script>
+</body>
+
+</html>
