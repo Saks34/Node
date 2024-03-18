@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery Manipulation with CDN</title>
+<!-- jQuery CDN link -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+// Sample JSON data
+var jsonData = {
+"name": "John Doe",
+"age": 30,
+"city": "New York"
+};
+
+// Update HTML elements with JSON data using selectors by name
+$('[name="name"]').text(jsonData.name);
+$('[name="age"]').text(jsonData.age);
+$('[name="city"]').text(jsonData.city);
+
+// Update attributes
+$('[name="link"]').attr('href', 'https://example.com');
+
+// Additional manipulation example
+$('[name="button"]').on('click', function(){
+    alert("Button clicked!");
+});
+});
+</script>
+</head>
+<body>
+
+<!-- HTML elements to manipulate -->
+<div>Name: <span name="name"></span></div>
+<div>Age: <span name="age"></span></div>
+<div>City: <span name="city"></span></div>
+<a name="link" href="#">Link</a>
+<button name="button">Click Me</button>
+
+</body>
+</html>
